@@ -1,6 +1,6 @@
 <?php
 
-namespace Randomizer\Exception;
+namespace Cinam\Randomizer\Exception;
 
 /**
  * Exception interface for all exceptions thrown by the library.

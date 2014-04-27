@@ -1,8 +1,8 @@
 <?php
 
-namespace Randomizer;
+namespace Cinam\Randomizer;
 
-use Randomizer\Exception\InvalidArgumentException;
+use Cinam\Randomizer\Exception\InvalidArgumentException;
 
 /**
  * Class for generating random numbers.

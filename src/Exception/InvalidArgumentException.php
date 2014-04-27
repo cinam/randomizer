@@ -1,6 +1,6 @@
 <?php
 
-namespace Randomizer\Exception;
+namespace Cinam\Randomizer\Exception;
 
 /**
  * Exception class thrown when an argument of a method is invalid.

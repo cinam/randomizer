@@ -1,0 +1,19 @@
+{
+    "name": "cinam/randomizer",
+    "description": "Tools for generating random values.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "cinam",
+            "email": "cinam@hotmail.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "3.7.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Cinam\\Randomizer\\": "src/"
+        }
+    }
+}

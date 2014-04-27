@@ -1,10 +1,10 @@
 <?php
 
-namespace Randomizer\Tests;
+namespace Cinam\Randomizer\Tests;
 
-use Randomizer\NumberGenerator;
-use Randomizer\NumberGeneratorInterface;
-use Randomizer\Exception\InvalidArgumentException;
+use Cinam\Randomizer\NumberGenerator;
+use Cinam\Randomizer\NumberGeneratorInterface;
+use Cinam\Randomizer\Exception\InvalidArgumentException;
 
 class NumberGeneratorTest extends \PHPUnit_Framework_TestCase
 {

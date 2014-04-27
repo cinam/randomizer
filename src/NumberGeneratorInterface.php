@@ -1,6 +1,6 @@
 <?php
 
-namespace Randomizer;
+namespace Cinam\Randomizer;
 
 /**
  * Interface for number generator.
