@@ -15,5 +15,8 @@
         "psr-4": {
             "Cinam\\Randomizer\\": "src/"
         }
+    },
+    "require": {
+        "php": ">=5.3.0"
     }
 }
