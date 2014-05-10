@@ -88,7 +88,7 @@ class RandomizerTest extends \PHPUnit_Framework_TestCase
         );
     }
 
-    public function testValuePowers()
+    public function testGetValueByPowers()
     {
         $values = array('one', 'two', 'three');
         $this->assertEquals('one', $this->randomizer->getValueByPowers($values, array(44, 0, 0)));
