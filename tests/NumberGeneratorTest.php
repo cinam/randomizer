@@ -3,13 +3,12 @@
 namespace Cinam\Randomizer\Tests;
 
 use Cinam\Randomizer\NumberGenerator;
-use Cinam\Randomizer\NumberGeneratorInterface;
 use Cinam\Randomizer\Exception\InvalidArgumentException;
 
 class NumberGeneratorTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @var NumberGeneratorInterface
+     * @var NumberGenerator
      */
     protected $generator;
 

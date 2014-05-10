@@ -9,7 +9,7 @@ use Cinam\Randomizer\Exception\InvalidArgumentException;
  *
  * @author cinam <cinam@hotmail.com>
  */
-class NumberGenerator implements NumberGeneratorInterface
+class NumberGenerator
 {
     /**
      * Returns random integer from given range.
