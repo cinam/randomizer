@@ -128,4 +128,24 @@ class Randomizer
 
         return $values[$rolledIndex];
     }
+
+    /**
+     * Returns an array value with equal probabilities.
+     * The input array must not be empty.
+     *
+     * @param array $values Array of values to be returned.
+     *
+     * @return mixed One of the values of the input array.
+     */
+    public function getArrayValue(array $values)
+    {
+        if (empty($values)) {
+            throw new InvalidArgumentException('Empty parameter');
+        }
+
+        // reindex array
+        $values = \array_values($values);
+
+        return $values[\array_rand($values)];
+    }
 }

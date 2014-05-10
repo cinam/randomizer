@@ -124,4 +124,20 @@ class RandomizerTest extends \PHPUnit_Framework_TestCase
             array(array(1, 1, 1), array(1, 1, -0.0001)),
         );
     }
+
+    public function testGetArrayValue()
+    {
+        $values = array('one', 'two', 'three');
+        for ($i = 0; $i < 100; $i++) {
+            $this->assertContains($this->randomizer->getArrayValue($values), $values);
+        }
+    }
+
+    /**
+     * @expectedException InvalidArgumentException
+     */
+    public function testGetArrayValueException()
+    {
+        $this->randomizer->getArrayValue(array());
+    }
 }
