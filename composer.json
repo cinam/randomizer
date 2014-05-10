@@ -1,6 +1,8 @@
 {
     "name": "cinam/randomizer",
     "description": "Tools for generating random values.",
+    "homepage": "http://github.com/cinam/randomizer",
+    "keywords": ["random", "random values", "random numbers"],
     "license": "MIT",
     "authors": [
         {
