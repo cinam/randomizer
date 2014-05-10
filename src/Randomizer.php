@@ -109,7 +109,7 @@ class Randomizer
      *                      Each key's "power" means likeness of
      *                      the corresponding array value being returned.
      *
-     * @return mixed A value of the "values" array.
+     * @return mixed One of the values of the "values" array.
      */
     public function getValueByPowers(array $values, array $powers)
     {
