@@ -99,4 +99,33 @@ class Randomizer
 
         return $key;
     }
+
+    /**
+     * Returns an array value based on the "powers" of array values.
+     * Arrays must be not empty and of equal sizes.
+     *
+     * @param array $values Array of values to be returned.
+     * @param array $powers Array of non-negative float values.
+     *                      Each key's "power" means likeness of
+     *                      the corresponding array value being returned.
+     *
+     * @return mixed A value of the "values" array.
+     */
+    public function getValueByPowers(array $values, array $powers)
+    {
+        if (empty($values)
+                || empty($powers)
+                || \count($values) !== \count($powers)
+        ) {
+            throw new InvalidArgumentException('Empty parameter or count not equal');
+        }
+
+        // reindex arrays
+        $values = \array_values($values);
+        $powers = \array_values($powers);
+
+        $rolledIndex = $this->getArrayKeyByPowers($powers);
+
+        return $values[$rolledIndex];
+    }
 }

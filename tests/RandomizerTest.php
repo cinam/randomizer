@@ -79,9 +79,49 @@ class RandomizerTest extends \PHPUnit_Framework_TestCase
     public function providerForGetArrayKeyByPowersException()
     {
         return array(
+            // empty array:
             array(array()),
+
+            // sum of powers zero or power negative:
             array(array(0, 0, 0)),
             array(array(1, 1, -0.0001)),
+        );
+    }
+
+    public function testValuePowers()
+    {
+        $values = array('one', 'two', 'three');
+        $this->assertEquals('one', $this->randomizer->getValueByPowers($values, array(44, 0, 0)));
+        $this->assertEquals('two', $this->randomizer->getValueByPowers($values, array(0, 5, 0)));
+        $this->assertEquals('three', $this->randomizer->getValueByPowers($values, array(0, 0, 0.0001)));
+
+        $this->assertEquals('one', $this->randomizer->getValueByPowers(array('one'), array(15)));
+    }
+
+    /**
+     * @dataProvider providerForGetValueByPowersException
+     * @expectedException InvalidArgumentException
+     */
+    public function testGetValueByPowersException($values, $powers)
+    {
+        $this->randomizer->getValueByPowers($values, $powers);
+    }
+
+    public function providerForGetValueByPowersException()
+    {
+        return array(
+            // empty array:
+            array(array(), array()),
+            array(array(1), array()),
+            array(array(), array(1)),
+
+            // counts not equal:
+            array(array(1), array(1, 1)),
+            array(array(1, 1), array(1)),
+
+            // sum of powers zero or power negative:
+            array(array(1, 1, 1), array(0, 0, 0)),
+            array(array(1, 1, 1), array(1, 1, -0.0001)),
         );
     }
 }
