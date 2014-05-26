@@ -146,6 +146,6 @@ class Randomizer
         // reindex array
         $values = \array_values($values);
 
-        return $values[\array_rand($values)];
+        return $values[$this->generator->getInt(0, count($values) - 1)];
     }
 }
