@@ -1,6 +1,6 @@
 <?php
 
-namespace Cinam\Randomizer\Tests;
+namespace Cinam\Randomizer\tests;
 
 use Cinam\Randomizer\NumberGenerator;
 use Cinam\Randomizer\Exception\InvalidArgumentException;
